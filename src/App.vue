@@ -2,13 +2,6 @@
   <Hero />
 </template>
 
-<script>
+<script setup>
 import Hero from './components/Hero.vue'
-
-export default {
-  name: 'App',
-  components: {
-    Hero
-  }
-}
 </script>
