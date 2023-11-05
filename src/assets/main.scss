@@ -6,20 +6,41 @@ html {
   font-family: 'Circular', serif;
 }
 
+.Container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 $gutters;
+
+  @include breakpoint-up(mobile) {
+    max-width: calc(440px + #{$gutters});
+  }
+
+  @include breakpoint-up(tablet) {
+    max-width: calc(560px + #{$gutters});
+  }
+
+  @include breakpoint-up(big-tablet) {
+    max-width: calc(800px + #{$gutters});
+  }
+
+  @include breakpoint-up(desktop) {
+    max-width: calc(1120px + #{$gutters});
+  }
+
+
+}
+
 
 h1 {
   font-size: 30px;
-  @include breakpoint-up(mobile) {
-    font-size: 40px;
-  }
   @include breakpoint-up(tablet) {
-    font-size: 50px;
+    font-size: 35px;
   }
   @include breakpoint-up(big-tablet) {
-    font-size: 60px;
+    font-size: 40px;
   }
   @include breakpoint-up(desktop) {
-    font-size: 70px;
+    font-size: 48px;
   }
 }
 
