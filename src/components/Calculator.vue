@@ -8,15 +8,12 @@
         <button class="bg-[#013562] text-white text-lg mx-1 w-[75px] h-[50px]" @click="appendToInput('*')">*</button>
         <button class="bg-[#013562] text-white text-lg mx-1 w-[75px] h-[50px]" @click="appendToInput('/')">/</button>
       </div>
-      <div class="flex justify-center hidden">
-        <button class="bg-[#013562] text-white text-lg mx-1 w-[75px] h-[50px]" @click="clearInput">C</button>
-        <button class="bg-[#013562] text-white text-lg mx-1 w-[75px] h-[50px]" @click="calculateResult">=</button>
-      </div>
-
     </div>
     <div class="flex flex-col justify-center p-7 border-[#013562] border-2 rounded-lg">
-      <div id="calculation" class="text-[#013562] font-bold text-3xl text-center mb-5 break-words">{{ numericInput ? numericInput : '0' }}</div>
+      <div id="calculation" class="text-[#013562] font-bold text-3xl text-center mb-5 break-words">{{ calculation ? calculation : '0' }}</div>
       <div id="total" class="text-[#013562] font-bold text-3xl text-center break-words">Result {{ total }}</div>
+
+
     </div>
   </section>
 </template>
@@ -34,7 +31,13 @@ export default {
     validateNumericInput() {
       // Remove any non-numeric characters
       this.numericInput = this.numericInput.replace(/[^0-9]/g, '');
-    }
-  }
+    },
+    appendToInput(operator) {
+      if (this.numericInput) {
+        this.calculation += this.numericInput + operator;
+        this.numericInput = ''; // Clear the numeric input
+      }
+    },
+  },
 };
 </script>
