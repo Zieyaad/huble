@@ -1,5 +1,26 @@
 @import './base.css';
+@import './variables.scss';
+@import './mixins.scss';
 
 html {
-    font-family: 'Circular', serif;
+  font-family: 'Circular', serif;
 }
+
+
+h1 {
+  font-size: 30px;
+  @include breakpoint-up(mobile) {
+    font-size: 40px;
+  }
+  @include breakpoint-up(tablet) {
+    font-size: 50px;
+  }
+  @include breakpoint-up(big-tablet) {
+    font-size: 60px;
+  }
+  @include breakpoint-up(desktop) {
+    font-size: 70px;
+  }
+}
+
+p {}

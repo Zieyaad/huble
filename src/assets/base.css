@@ -25,6 +25,6 @@
     font-weight: bold;
     font-display: block;
     src:
-            local('Circular'),
-            url('../assets/fonts/CircularStd-Black.woff2') format('woff2');
+        local('Circular'),
+        url('../assets/fonts/CircularStd-Black.woff2') format('woff2');
 }

@@ -1,0 +1,11 @@
+$mobile-breakpoint: 480px;
+$tablet-breakpoint: 600px;
+$big-tablet-breakpoint: 900px;
+$desktop-breakpoint: 1200px;
+
+$grid-breakpoints: (
+  mobile: $mobile-breakpoint,
+  tablet: $tablet-breakpoint,
+  big-tablet: $big-tablet-breakpoint,
+  desktop: $desktop-breakpoint,
+);
