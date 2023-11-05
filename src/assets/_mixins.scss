@@ -1,4 +1,4 @@
-// Breakpoint
+// This file is added to the project inside vue.config.js
 @mixin breakpoint-up($breakpoint) {
   $value: map-get($grid-breakpoints, $breakpoint);
 
