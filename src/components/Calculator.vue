@@ -11,7 +11,7 @@
     </div>
     <div class="flex flex-col justify-center p-7 border-[#013562] border-2 rounded-lg">
       <div id="calculation" class="text-[#013562] font-bold text-3xl text-center mb-5 break-words">{{ calculation ? calculation : 0 }}</div>
-      <div id="total" class="text-[#013562] font-bold text-3xl text-center break-words">Result: {{ total }}</div>
+      <div id="total" class="text-[#013562] font-bold text-3xl text-center break-words">Result {{ total }}</div>
     </div>
   </section>
 </template>
