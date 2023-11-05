@@ -20,14 +20,18 @@
   </section>
 </template>
 
-<script>
-</script>
+<script></script>
 
 <style scoped lang="scss">
   .Block {
     position: relative;
     display: flex;
-    min-height: 700px;
+    min-height: 500px;
+
+    @include breakpoint-up(desktop) {
+      min-height: 700px;
+    }
+
     // Mask
     &-Mask {
       position: absolute;
@@ -35,8 +39,8 @@
       right: 0;
       bottom: 0;
       left: 0;
-      background-color: rgba(0, 0, 0, 0.4);
       z-index: -1;
+      background-color: var(--color-black);
 
       img {
         position: absolute;
@@ -44,6 +48,7 @@
         height: 100%;
         object-fit: cover;
         object-position: center center;
+        opacity: 0.4;
       }
     }
   }

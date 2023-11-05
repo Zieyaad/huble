@@ -1,8 +1,8 @@
+$circular-font:           'Circular', serif;
 $mobile-breakpoint:       480px;
 $tablet-breakpoint:       600px;
 $big-tablet-breakpoint:   900px;
 $desktop-breakpoint:      1200px;
-$gutters:                 20px;
 
 $grid-breakpoints: (
   mobile:       $mobile-breakpoint,
@@ -10,3 +10,12 @@ $grid-breakpoints: (
   big-tablet:   $big-tablet-breakpoint,
   desktop:      $desktop-breakpoint,
 );
+
+:root {
+  --mobile-breakpoint:        $mobile-breakpoint;
+  --tablet-breakpoint:        $tablet-breakpoint;
+  --big-tablet-breakpoint:    $big-tablet-breakpoint;
+  --desktop-breakpoint:       $desktop-breakpoint;
+  --color-black:              #000000;
+  --gutters:                  20px;
+}

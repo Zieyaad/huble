@@ -1,38 +1,35 @@
 @import './base.css';
-@import './variables.scss';
-@import './mixins.scss';
 
 html {
-  font-family: 'Circular', serif;
+  font-family: $circular-font;
 }
 
 .Container {
   width: 100%;
   margin: 0 auto;
-  padding: 0 $gutters;
+  padding: 0 var(--gutters);
 
   @include breakpoint-up(mobile) {
-    max-width: calc(440px + #{$gutters});
+    max-width: calc(440px + var(--gutters));
   }
 
   @include breakpoint-up(tablet) {
-    max-width: calc(560px + #{$gutters});
+    max-width: calc(560px + var(--gutters));
   }
 
   @include breakpoint-up(big-tablet) {
-    max-width: calc(800px + #{$gutters});
+    max-width: calc(800px + var(--gutters));
   }
 
   @include breakpoint-up(desktop) {
-    max-width: calc(1120px + #{$gutters});
+    max-width: calc(1120px + var(--gutters));
   }
-
-
 }
 
 
 h1 {
   font-size: 30px;
+
   @include breakpoint-up(tablet) {
     font-size: 35px;
   }
