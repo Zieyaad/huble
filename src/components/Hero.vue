@@ -13,8 +13,8 @@
         </p>
       </div>
       <div class="Block-Footer">
-        <a class="button primary" href=":javascript;">Request demo</a>
-        <a class="button secondary" href=":javascript;">Speak to our team</a>
+        <a class="button button-primary" href=":javascript;">Request demo</a>
+        <a class="button button-secondary" href=":javascript;">Speak to our team</a>
       </div>
     </div>
   </section>
@@ -25,8 +25,10 @@
 <style scoped lang="scss">
   .Block {
     position: relative;
-    display: flex;
     min-height: 500px;
+    display: flex;
+    align-items: flex-end;
+    padding: 80px 0;
 
     @include breakpoint-up(desktop) {
       min-height: 700px;
@@ -50,6 +52,35 @@
         object-position: center center;
         opacity: 0.4;
       }
+    }
+
+    &-Content {
+      max-width: 650px;
+    }
+
+    &-Footer {
+      max-width: 550px;
+      padding-top: 30px;
+
+      @include breakpoint-up(mobile) {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 40px;
+      }
+
+      a {
+        margin-top: 5px;
+        margin-bottom: 5px;
+
+        + a {
+          margin-left: 5px;
+        }
+      }
+    }
+
+    .subtitle {
+      color: var(--color-red);
+      font-weight: bold;
     }
   }
 </style>

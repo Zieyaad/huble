@@ -26,18 +26,79 @@ html {
   }
 }
 
+.button {
+  --btn-bg-color: var(--color-red);
+  --btn-bg-hover-color: var(--color-dark-red);
+  --btn-fg-color: var(--color-white);
+  --btn-fg-hover-color: var(--color-white);
+  --btn-border-color: var(--color-red);
+  --btn-border-hover-color: var(--color-dark-red);
+
+  position: relative;
+  display: inline-block;
+  min-width: 150px;
+  padding: 10px 30px;
+  border-radius: 45px;
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all ease-in-out 0.25s;
+  color: var(--btn-fg-color);
+  background-color: var(--btn-bg-color);
+  border: 3px solid var(--btn-border-color);
+
+  @include breakpoint-up(big-tablet) {
+    padding: 16px 40px;
+    font-size: 16px;
+    border-radius: 58px;
+  }
+
+  &:hover {
+    color: var(--btn-fg-hover-color);
+    background-color: var(--btn-bg-hover-color);
+    border-color: var(--btn-border-hover-color);
+  }
+
+  // Secondary Button
+  &-secondary {
+    --btn-bg-color: transparent;
+    --btn-bg-hover-color: var(--color-red);
+    --btn-fg-color: var(--color-white);
+    --btn-fg-hover-color: var(--color-white);
+    --btn-border-color: var(--color-red);
+    --btn-border-hover-color: var(--color-red);
+  }
+}
 
 h1 {
-  font-size: 30px;
+  font-size: 38px;
+  line-height: 1.2;
+  font-weight: bold;
+  letter-spacing: .25px;
+  margin: 10px 0;
+  color: var(--color-white);
 
   @include breakpoint-up(tablet) {
-    font-size: 35px;
+    font-size: 40px;
   }
   @include breakpoint-up(big-tablet) {
-    font-size: 40px;
+    font-size: 42px;
   }
   @include breakpoint-up(desktop) {
     font-size: 48px;
+  }
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  margin: 10px 0;
+  color: var(--color-white);
+
+  @include breakpoint-up(tablet) {
+    font-size: 18px;
   }
 }
 

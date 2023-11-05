@@ -13,10 +13,9 @@ $grid-breakpoints: (
 );
 
 :root {
-  --mobile-breakpoint:        $mobile-breakpoint;
-  --tablet-breakpoint:        $tablet-breakpoint;
-  --big-tablet-breakpoint:    $big-tablet-breakpoint;
-  --desktop-breakpoint:       $desktop-breakpoint;
-  --color-black:              #000000;
   --gutters:                  20px;
+  --color-black:              #000000;
+  --color-white:              #ffffff;
+  --color-red:                #FF5A5F;
+  --color-dark-red:           #cc4d59;
 }
